@@ -1,0 +1,17 @@
+{
+  "name": "tree-sitter-racket",
+  "version": "1.0.0",
+  "description": "tree-sitter racket parser",
+  "main": "bindings/node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dannypsnl",
+  "license": "BSD3",
+  "dependencies": {
+    "nan": "^2.15.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.4"
+  }
+}
