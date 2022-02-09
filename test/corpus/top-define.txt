@@ -1,0 +1,24 @@
+==================
+top level define
+==================
+
+#lang racket
+(define x 1)
+(define (foo x)
+  x)
+(define (bar)
+  1)
+(define (baz x)
+  (+ 1 x))
+
+---
+
+(source_file
+  (language (identifier))
+  (define (identifier) (number))
+  (define (identifier) (identifier)
+    (body (identifier)))
+  (define (identifier)
+    (body (number)))
+  (define (identifier) (identifier)
+    (body (function_call (identifier) (number) (identifier)))))
