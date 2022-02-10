@@ -5,10 +5,14 @@ let binding
 #lang racket
 (let ((x 1))
   x)
+(let ([x 1])
+  x)
 
 ---
 
 (source_file
   (language (identifier))
-  (let (identifier) (number)
+  (let (binding (identifier) (number))
+    (body (identifier)))
+  (let (binding (identifier) (number))
     (body (identifier))))
