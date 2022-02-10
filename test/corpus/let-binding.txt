@@ -1,0 +1,14 @@
+==================
+let binding
+==================
+
+#lang racket
+(let ((x 1))
+  x)
+
+---
+
+(source_file
+  (language (identifier))
+  (let (identifier) (number)
+    (body (identifier))))

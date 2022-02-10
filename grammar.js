@@ -24,8 +24,10 @@ module.exports = grammar({
     body: ($) => seq(repeat($._statement), $._statement),
     _statement: ($) => choice($.define, $._expression),
     _expression: ($) =>
-      choice($.lambda, $.identifier, $.number, $.function_call),
+      choice($.lambda, $.let, $.identifier, $.number, $.function_call),
     function_call: ($) => seq("(", $._expression, repeat($._expression), ")"),
+    let: ($) => seq("(", "let", "(", repeat($._binding), ")", $.body, ")"),
+    _binding: ($) => seq("(", $.identifier, $._expression, ")"),
     lambda: ($) =>
       seq(
         "(",
