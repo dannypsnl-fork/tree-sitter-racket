@@ -39,6 +39,7 @@ module.exports = grammar({
         $.body,
         ")"
       ),
+    // datum
     number: ($) => /[0-9]+/,
     identifier: ($) => /[a-zA-Z0-9\+\-\.\*\/<=>!?:$%_&~^\*]+/,
   },
